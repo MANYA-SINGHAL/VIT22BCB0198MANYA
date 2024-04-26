@@ -1,169 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style1.css">
-    <script src="https://kit.fontawesome.com/4a95f6b9a9.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #recipe-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .recipe {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .recipe:hover {
+            background-color:rgb(235, 223, 109);
+        }
+
+        #recipe-details {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #recipe-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        #recipe-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        #recipe-ingredients {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        #close-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #close-btn:hover {
+            background-color:#666;
+        }
+    </style>
 </head>
-
 <body>
-
-    <div id="header">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a> </li>
-                    <li><a href="#">About</a> </li>
-                    <li><a href="#">Portfolio</a> </li>
-                    <li><a href="#">Contact</a> </li>
-                </ul>
-            </nav>
-
-            <div class="header-text">
-                <p>Student</p>
-                <h1>
-                    Hello, I am Manya Singhal from Lucknow , Uttar Pradesh
-                </h1>
-            </div>
-        </div>
-    </div>
-
-<!-- about -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="aboutcol_1">
-                    <img src="https://i.ibb.co/fCbm27s/aboutme.png" height="250px", width="250px"> 
-                </div>
-
-                <div class="aboutcol_2">
-                    <h1 class="subtitle" >About Me</h1>
-                    <p>Hello! I'm Manya Singhal , a passionate second year B.tech student in Computer Science with a specialization in Bioinformatics with a keen interest in technology and innovation. As I progress through my academic journey, I've cultivated a solid understanding of programming languages such as python, C, C++, HTML CSS and Javascript as well as fundamental concepts in algorithms and data structures.  I've eagerly immersed myself in hands-on projects, from building basic applications to exploring more complex systems, honing my problem-solving skills along the way. Whether it's diving into a new coding challenge or collaborating with peers to bring ideas to fruition, I'm fueled by a passion for learning and a drive to make meaningful contributions in the world of computing.I'm excited about the possibilities that lie ahead in my career journey and eager to leverage my skills and enthusiasm to tackle the exciting challenges that await. Let's connect and explore how we can innovate together!</p>
-                    <br><br>
-
-                    <div class="tab_titles">
-                        <h1 class="tab_links"> Education</h1> 
-                    </div>
-
-                    <div class="tab_contents">
-                        <ul>
-                            <li><span>2022-26 (Current) -</span><br>B.tech in Computer Science and Engineering with Specialization in Bioinformatics</li><br>
-                            <li><span>2018 - </span><br>Intermediate(12th) with a percentage of 95%<br></li><br>
-                            <li><span>2020 - </span><br>High School(10th) with a percentage of 97.6%</li><br>
-                        </ul>
-                    </div>
-                    <br>
-
-<!-- skills -->
-
-                    <div class="tab_titles">
-                        <h1 class="tab_links">Skills</h1> 
-                    </div>
-
-                    <div class="tab_contents">
-                        <ul>
-                            <li><span>Web Dev</span><br>Frontend</li><br>
-                            <li><span>UI/UX</span><br>Web Designing<br></li><br>
-                            <li><span>Programming Languages </span><br>Python,C,C++,Java,HTML,CSS,JS</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!----services----->
-
-<div id="services">
     <div class="container">
-        <h1 class="subtitle">My Services</h1>
-        <div class="services-list">
-            <div>
-                <h2> Web development</h2>
-                <p>I possess a strong foundation in front-end development using HTML, CSS, and JavaScript. I can craft beautiful, user-friendly interfaces that adapt to any screen size. My skillset extends to popular frameworks like React and Bootstrap, ensuring your website is not only functional but also visually stunning. </p>
-                <a href="#">learn more</a>
-            </div>
-
-            <div>
-                <h2> App development</h2>
-                <p>My expertise spans across native app development for iOS and Android, utilizing frameworks like Swift and Kotlin to craft smooth, responsive user experiences.  For cross-platform development, I leverage frameworks like React Native or Flutter, ensuring your app reaches a wider audience with a single codebase.  I'm well-versed in integrating APIs for data exchange and building robust backends for efficient app functionality</p>
-                <a href="#">learn more</a>
-            </div>
-
-            <div>
-                <h2> UI/UX Design</h2>
-                <p>My passion lies in crafting intuitive and visually appealing interfaces that make using your product a joy. I employ a user-centered design approach, focusing on in-depth user research and usability testing to ensure your product is not only beautiful but also functional and easy to navigate</p>
-                <a href="#">learn more</a>
-            </div>
+        <h1>Recipe Finder</h1>
+        <ul id="recipe-list"></ul>
+        <div id="recipe-details">
+            <h2 id="recipe-title"></h2>
+            <p id="recipe-description"></p>
+            <p id="recipe-ingredients"></p>
+            <button id="close-btn" onclick="closeDetails()">Close</button>
         </div>
     </div>
-</div>
-<br><br><br>
 
-<!-- portfolio-->
+    <script>
+        const recipes = [
+            {
+                title: "Milk Tea",
+                description:
+                    "Boil water in a pot or kettle. Once the water comes to a boil, add tea leaves or tea bags to the boiling water. Let the tea steep for 2-5 minutes, depending on how strong you like your tea. If you're adding milk and sugar, you can add them directly to the pot or to your cup before pouring the tea. Stir well and strain the tea into cups. Enjoy your hot cup of tea!",
+                ingredients: [
+                    "Water",
+                    "Tea leaves or tea bags",
+                    "Milk (optional)",
+                    "Sugar (optional)"
+                ]
+            },
+            {
+                title: "Coffee",
+                description:
+                    "Start by boiling water in a kettle or pot. Meanwhile, grind your coffee beans to a medium-coarse consistency if you're using whole beans. Once the water is boiled, add a couple of tablespoons of ground coffee to a coffee filter or a French press. Pour hot water over the coffee grounds, ensuring all the grounds are saturated. Let it steep for about 4 minutes. Pour the brewed coffee into your favorite mug. Add sugar, milk, or cream to taste, and stir well. Enjoy your freshly brewed cup of coffee!",
+                ingredients: [
+                    "Water",
+                    "Coffee beans",
+                    "Sugar (optional)",
+                    "Milk or cream (optional)"
+                ]
+            },
 
-<div id="portfolio">
-    <div class="container">
-        <h1 class="subtitle"> My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="https://i.ibb.co/0Zp3Yqs/bookapp.jpg" width="300px", height="330px">
-                <div class="layer">
-                    <h3>Online Book Reading Website</h3>
-                    <p>
-                        This website lets book readers to read their favourites of all times anytime anywhere without buying it.
-                    </p>
-                </div>
-            </div>
-            <div class="work">
-                <img src="https://i.ibb.co/r0NyyF8/recipe.png" width="300px", height="330px">
-                <div class="layer">
-                    <h3>Recipe Finder Website</h3>
-                    <p>
-                        This website helps its users to get step by step recipe of their favourite dishes along with a list of ingredients needed.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<br><br><br> 
+        {
+                title: " Creamy Pasta",
+                description:
+                    "Start by boiling your pasta of choice in a pot of salted water until it's al dente. While the pasta cooks, heat a skillet over medium heat and add a tablespoon of olive oil. Once the oil is hot, add minced garlic and sauté for a minute until fragrant.Next, pour in a cup of heavy cream and bring it to a gentle simmer. Season the cream sauce with salt, pepper, and any herbs or spices you like. Stir in grated Parmesan cheese until it's melted and the sauce is smooth and creamy.Once the pasta is cooked, drain it and add it directly to the skillet with the creamy sauce. Toss the pasta until it's well coated in the sauce, adding a splash of pasta water if needed to loosen it up.Serve the creamy pasta hot, garnished with chopped fresh parsley and an extra sprinkle of Parmesan cheese if desired. Enjoy your delicious and indulgent meal in just minutes!",
 
-<!-- contact -->
+                    ingredients: [
+                    "Pasta of your choice",
+                    "Olive oil",
+                    "Garlic",
+                    "Heavy cream",
+                    "Salt",
+                    "Pepper",
+                    "Parmesan cheese",
+                    "Fresh parsley (for garnish)"
+                    ]
+                },  
+                
+        {
+                title: "Vegetable Sandwich",
+                description:
+                        "Start by gathering your favorite vegetables for the sandwich.Use ingredients like lettuce, sliced tomatoes, cucumbers, bell peppers, onions, and avocado.Next, prepare your bread of choice.On the bread, spread a layer of spread of your choice on each slice. You can use mayonnaise, mustard, hummus, or any other spread you like.Layer the prepared vegetables onto one slice of bread.Place the other slice of bread on top to create a sandwich. Press down gently to ensure all the ingredients are held together.Your vegetable sandwich is now ready to enjoy!",
 
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact_left">
-                <h1 class="subtitle">Contact Me</h1>
-                <p><i class="fa-regular fa-envelope"></i>manyasinghal2003@gmail.com</p>
-                <p><i class="fa-solid fa-phone-volume"></i>(+91)9695432396</p>
+                        ingredients: [
+                        "Bread slices",
+                        "Lettuce leaves",
+                        "Sliced tomatoes",
+                        "Sliced cucumbers",
+                        "Sliced bell peppers (red, green, yellow)",
+                        "Sliced onions",
+                        "Avocado slices",
+                        "Condiments or spreads (mayonnaise, mustard, hummus, pesto, etc.)"
+                        ]
+                },  
+        {
+                title: "Omlette",
+                    description:
+                        "Beat 2 eggs in a bowl with salt and pepper.Heat a non-stick skillet and add butter.Pour in the beaten eggs and cook until set.Add fillings like cheese and veggies, fold, and serve hot!",
 
-                <div class="social_media">
-                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://twitter.com/"><i class="fa-brands fa-square-twitter"></i></a>
-                </div>
-            </div>
+                       ingredients:[
+                       "Eggs",
+                       "Salt and Pepper",
+                       "Butter or cooking oil",
+                       "Shredded cheese (cheddar, mozzarella, etc.)",
+                       "Diced vegetables (bell peppers, onions, tomatoes, spinach, mushrooms, etc.)"
+                       ] 
+                },
 
-            <div class="contact_right">
-                <form> 
-                   <input type="text" name="Name" placeholder="Your Name" required>
-                   <input type="email" name="Email" placeholder="Your Email" required>
-                   <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
-                   <button type="submit" class="btn btn2">Submit</button>
-                </form>           
-             </div>
-        </div>
-    </div>
-</div>
+        {
+                title: "French Toast",
+                    description:
+                        "Whisk together eggs, milk, vanilla extract, and cinnamon in a shallow dish.Dip slices of bread into the egg mixture, coating both sides evenly.Heat a skillet or griddle over medium heat and add butter.Cook the bread slices for 2-3 minutes on each side until golden brown. Serve hot with syrup or toppings of your choice!",
 
-</div>
-    
+                    ingredients:[
+                    "Slices of bread",
+                    "Eggs",
+                    "Milk",
+                    "Vanilla extract",
+                    "Cinnamon (optional)",
+                    "Butter or cooking oil (for frying)"
+                    ]    
+                },
+
+        {
+                title: "Chocolate Shake",
+                    description:
+                        "In a blender, combine milk, chocolate syrup, and a scoop of ice cream.Optionally, add a tablespoon of cocoa powder for extra richness.Blend until smooth and creamy.Pour into a glass, top with whipped cream and chocolate shavings if desired. Enjoy your indulgent chocolate shake!",
+
+                     ingredients:[
+                    " Milk",
+                    "Chocolate syrup or cocoa powder",
+                    "Ice cream (vanilla or chocolate flavored)",
+                    "Ice cubes ",
+                    "Whipped cream (optional, for topping)",
+                    "Chocolate shavings or sprinkles (optional, for garnish)"
+                     ]   
+                },
+
+        {
+                title: "Hawaiian Salad",
+                    description:
+                        "In a large bowl, combine chopped pineapple, diced mango, sliced cucumber, and shredded coconut.Add thinly sliced red onion and chopped cilantro for extra flavor.Drizzle with a dressing made of lime juice, honey, and a pinch of salt.Toss everything together until well combined. Serve chilled and enjoy this refreshing Hawaiian salad!",
+
+                        ingredients:[
+                        "Chopped pineapple",
+                        "Diced mango",
+                        "Sliced cucumber",
+                        "Shredded coconut",
+                        "Thinly sliced red onion",
+                        "Chopped cilantro",
+                        "Lime juice",
+                        "Honey",
+                        "Salt "
+                        ]
+                }, 
+
+                
+           
+        ];
+
+        const recipeList = document.getElementById("recipe-list");
+        const recipeDetails = document.getElementById("recipe-details");
+        const recipeTitle = document.getElementById("recipe-title");
+        const recipeDescription = document.getElementById("recipe-description");
+        const recipeIngredients = document.getElementById("recipe-ingredients");
+
+        // Display recipe list
+        recipes.forEach((recipe, index) => {
+            const listItem = document.createElement("li");
+            listItem.classList.add("recipe");
+            listItem.textContent = recipe.title;
+            listItem.addEventListener("click", () => showDetails(index));
+            recipeList.appendChild(listItem);
+        });
+
+        function showDetails(index) {
+            const selectedRecipe = recipes[index];
+            recipeTitle.textContent = selectedRecipe.title;
+            recipeDescription.textContent = selectedRecipe.description;
+            recipeIngredients.textContent = "Ingredients: " + selectedRecipe.ingredients.join(", ");
+            recipeDetails.style.display = "block";
+        }
+
+        function closeDetails() {
+            recipeDetails.style.display = "none";
+        }
+    </script>
 </body>
-
 </html>
